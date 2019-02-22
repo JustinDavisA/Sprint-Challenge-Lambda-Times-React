@@ -1,7 +1,23 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import sc from 'styled-components';
 
 import Card from './Card';
+
+const CardsContainer = sc.div`
+  display: flex;
+  justify-content: space-evenly;
+  align-items: none;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 16px;
+  flex-wrap: wrap;
+
+@media (min-width: 1200px) {
+  .cards-container {
+    width: 1200px;
+  }
+}`;
 
 const Cards = props => {
   return (
